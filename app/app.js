@@ -72,7 +72,7 @@ app.get('/', async (req, res) => {
 app.post('/add', async (req, res) => {
   const { title, description } = req.body;
 
-  if (!title || !description) {
+  if (!title || !description || title.trim() === '' || description.trim() === '') {
     const items = await db.getAllLearningItems();
     return res.render('index', {
       items,
