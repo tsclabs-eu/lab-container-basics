@@ -1125,10 +1125,6 @@
             }
         }
 
-        async function unresolveItem(id) {
-            await updateStatus(id, 'todo');
-        }
-
         async function deleteItem(id) {
             if (confirm('Are you sure you want to delete this learning goal?')) {
                 try {
