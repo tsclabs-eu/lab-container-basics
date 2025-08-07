@@ -940,7 +940,7 @@
 
         async function updateStatus(id, status) {
             try {
-                console.log('Updating status:', id, 'to', status);
+                // Removed console.log('Updating status:', id, 'to', status);
                 const response = await fetch(`/status/${id}`, {
                     method: 'POST',
                     headers: {
