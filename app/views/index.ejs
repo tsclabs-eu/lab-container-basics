@@ -1125,10 +1125,6 @@
             }
         }
 
-        async function resolveItem(id) {
-            await updateStatus(id, 'completed');
-        }
-
         async function unresolveItem(id) {
             await updateStatus(id, 'todo');
         }
