@@ -1085,8 +1085,6 @@
 
         async function reorderItems(draggedId, targetId) {
             try {
-                console.log('Sending reorder request:', { draggedId, targetId });
-
                 const response = await fetch('/reorder', {
                     method: 'POST',
                     headers: {
