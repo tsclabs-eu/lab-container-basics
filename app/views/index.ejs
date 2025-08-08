@@ -1057,7 +1057,6 @@
                 const draggedId = parseInt(draggedElement.dataset.id);
                 const targetId = parseInt(this.dataset.id);
 
-                console.log('Dropping item', draggedId, 'onto', targetId);
 
                 if (draggedId !== targetId) {
                     reorderItems(draggedId, targetId);
