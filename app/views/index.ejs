@@ -1101,8 +1101,6 @@
                 });
 
                 const result = await response.json();
-                console.log('Reorder response:', result);
-
                 if (response.ok && result.success) {
                     // Reload the page to show the new order
                     location.reload();
