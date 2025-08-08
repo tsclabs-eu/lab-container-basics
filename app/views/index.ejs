@@ -936,7 +936,6 @@
 
         async function updateStatus(id, status) {
             try {
-                // Removed console.log('Updating status:', id, 'to', status);
                 const response = await fetch(`/status/${id}`, {
                     method: 'POST',
                     headers: {
