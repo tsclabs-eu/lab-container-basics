@@ -127,7 +127,27 @@ class Database {
     }
 
     async getAllLearningItems() {
-        const selectSQL = 'SELECT id, title, description, status, resolved, order_index, created_at FROM learning_items ORDER BY CASE WHEN status = "todo" THEN 1 WHEN status = "progress" THEN 2 WHEN status = "completed" THEN 3 ELSE 4 END, order_index ASC, created_at DESC';
+        const selectSQL = `
+            SELECT
+                id,
+                title,
+                description,
+                status,
+                resolved,
+                order_index,
+                created_at
+            FROM
+                learning_items
+            ORDER BY
+                CASE
+                    WHEN status = "todo" THEN 1
+                    WHEN status = "progress" THEN 2
+                    WHEN status = "completed" THEN 3
+                    ELSE 4
+                END,
+                order_index ASC,
+                created_at DESC
+        `;
 
         if (this.config.type === 'sqlite') {
             return new Promise((resolve, reject) => {
